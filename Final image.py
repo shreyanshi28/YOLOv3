@@ -16,9 +16,9 @@ def select_image():
         with open("coco.names", "r") as f:
             class_list = [line.strip() for line in f.readlines()]
             
+        colors = np.random.uniform(0, 255, size=(len(class_list), 3))   
         layer_names = read_model.getLayerNames()
         output_layers = [layer_names[i[0] - 1] for i in read_model.getUnconnectedOutLayers()]
-        colors = np.random.uniform(0, 255, size=(len(class_list), 3))
         feature = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
         read_model.setInput(feature)
         output = read_model.forward(output_layers)
