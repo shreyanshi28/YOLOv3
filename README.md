@@ -1,7 +1,7 @@
 # Object Detection using YOLOv3
 
 ### Project Description
-The project utilizes OpenCV library to apply YOLO algorithm for object detection in images, videos and real time. The code is compatible to run on a CPU. I used the pre-trained weights of COCO dataset which is capable of recognizing 80 objects. A Tkinter window popup allows you to load video and images from local disk and display results. For real time detection, a pop up window on the running file would display results given that one has web cam access.
+The project utilizes OpenCV library to apply YOLO algorithm for object detection in images, videos and real time. The code is compatible to run on a CPU. I used the pre-trained weights of COCO dataset which is capable of recognizing 80 objects.
 
 ### Link to download pre-trained weights of COCO dataset
 Create a folder using titled "weights" and add these files. For better speed in videos and real time, one can use the tiny weights file instead of the original one. However, the detection becomes a little less efficient in this case. So, try using the original weights file for more accuracy.
