@@ -14,7 +14,7 @@ def select_video():
             class_list = [line.strip() for line in f.readlines()]
             
         layer_names = read_model.getLayerNames()
-        output_layers = [layer_names[i[0] - 1] for i in read_model.getUnconnectedOutLayers()]
+        output_layers = [layer_names[i - 1] for i in read_model.getUnconnectedOutLayers()]
         colors = np.random.uniform(0, 255, size=(len(class_list), 3))
         capture = cv2.VideoCapture(path)
         frame_seq = 0
